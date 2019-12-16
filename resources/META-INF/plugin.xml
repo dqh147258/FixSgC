@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.yxf.plugin.fix.sgc</id>
+    <name>FixSgC</name>
+    <version>1.0.0</version>
+    <vendor email="dqh147258@gmail.com" url="https://github.com/dqh147258">Freelance</vendor>
+
+    <description><![CDATA[
+      Used to fix the conflict with sou gou input method that it would change language when using "Ctrl + Alt + [*]" shortcut if "Ctrl" is set as the shortcut for changing language in sou gou input method.<br>
+      It is just available for Windows.</br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <depends>com.intellij.modules.xml</depends>
+    <depends>com.intellij.modules.xdebugger</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+    <application-components>
+        <component>
+            <interface-class>com.yxf.plugin.Component</interface-class>
+            <implementation-class>com.yxf.plugin.FixSouGouConflictComponent</implementation-class>
+        </component>
+    </application-components>
+
+</idea-plugin>
